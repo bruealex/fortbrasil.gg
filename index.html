@@ -1,63 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FORTBRASIL.GG - O maior hub de Fortnite do Brasil. Loja, Stats, Notícias e Mapa.">
-    <title>FORTBRASIL.GG - Hub de Fortnite Brasil</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .card-hover:hover { transform: translateY(-4px); transition: 0.3s; }
-        body { background-color: #0a0a0f; }
-    </style>
+
+    <title>YuppiNite -  by henrique</title>
+
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX_Kfd-9KbrFtQXAoDRw6ZPVs8v6nXyNOqsIEVG3s7rcoc0QAEEbSts_x_nbIcKvzaCmA&usqp=CAU">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script type="module" defer src="daily.js"></script>
+    <script defer src="jquery-3.6.0.js"></script>
 </head>
-<body class="text-white font-sans">
 
-    <!-- HEADER -->
-    <header class="bg-[#11111a] border-b border-purple-600 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold text-purple-400">FORTBRASIL.GG</h1>
-            <nav class="hidden md:flex gap-6">
-                <a href="#" class="hover:text-purple-400">Loja</a>
-                <a href="#stats" class="hover:text-purple-400">Stats</a>
-                <a href="#" class="hover:text-purple-400">Mapa</a>
-                <a href="#" class="hover:text-purple-400">Notícias</a>
-            </nav>
-        </div>
+<body>
+    <div class="menu">
+
+        <a id="link" href="index.html"> Loja </a>
+        <a id="link" href="cosmetics.php"> Cosmeticos</a>
+        <a id="link" href="https://discord.gg/rywRAUHDQg"> Discord Oficial</a>
+    </div>
+    <header>
+        <h1>YuppiNite - Feito pelo henrique</h1>
+        <p>Caso queira me ajudar, me siga no tiktok.</p>
     </header>
+    <div id="cards_daily">
 
-    <!-- HERO -->
-    <section class="bg-gradient-to-b from-purple-900 to-[#0a0a0f] text-center py-20 px-4">
-        <h2 class="text-5xl font-bold mb-4">FORTBRASIL.GG</h2>
-        <p class="text-gray-300 mb-6">O maior hub de Fortnite do Brasil</p>
-        <div class="max-w-md mx-auto flex">
-            <input id="playerInput" type="text" placeholder="Digite seu nick Epic" class="w-full p-3 rounded-l-lg bg-[#222] text-white outline-none">
-            <button onclick="buscarStats()" class="bg-purple-600 px-6 py-3 rounded-r-lg font-bold hover:bg-purple-700">Buscar</button>
+        <H1 id="OTSIKKO">Ofertas diarias</H1>
+        <div class="timer">
+           Loja reseta todo dia as 21hrs
         </div>
-    </section>
 
-    <!-- LOJA DE HOJE -->
-    <section class="container mx-auto p-4">
-        <h3 class="text-2xl font-bold mb-4">🔥 Loja de Hoje</h3>
-        <p class="text-gray-400 text-sm mb-4">Atualiza todo dia às 21h BRT</p>
-        <div id="loja" class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <p>Carregando loja...</p>
+    </div>
+    <div id="cards_featured_special">
+        <H1 id="OTSIKKO">Destaques</H1>
+        <div class="timer">
+            Bundles nao incluidos*
         </div>
-    </section>
 
-    <!-- STATS -->
-    <section id="stats" class="container mx-auto p-4 mt-10">
-        <h3 class="text-2xl font-bold mb-4">📊 Estatísticas</h3>
-        <div id="statsResultado" class="bg-[#11111a] p-6 rounded-lg border-purple-800">
-            <p class="text-gray-400">Busque um nick acima para ver KD, vitórias e partidas</p>
+    </div>
+    <div id="cards_featured">
+        <H1 id="OTSIKKO">Destaques</H1>
+        <div class="timer">
+            Bundles nao incluidos*
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-[#11111a] text-center p-6 mt-10 text-gray-400 border-t border-purple-900">
-        <p>© 2026 FORTBRASIL.GG - Feito por fãs. Não afiliado à Epic Games.</p>
-    </footer>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5909007701939000"
+     crossorigin="anonymous"></script>
+<!-- yuppi -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5909007701939000"
+     data-ad-slot="7760257367"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
-    <script src="script.js"></script>
 </body>
+
 </html>
