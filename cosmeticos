@@ -1,0 +1,38 @@
+<?php
+use FortniteApi\FortniteApi;
+require_once __DIR__. '/vendor/autoload.php';
+$api = new FortniteApi("de1dd3d8-274b-42fe-a32e-9c08507ef5be");
+
+// Pega os 50 primeiros cosméticos
+$cosmetics = $api->cosmetics->listAsync(["limit" => 50])->await();
+?>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>YuppiNite - Galeria Fortnite</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body style="background: linear-gradient(135deg, #8A2BE2 0%, #00FFFF 100%); color: white;">
+
+<div class="menu" style="background: rgba(0,0,0,0.5); padding: 15px; text-align: center;">
+    <a href="/" style="color:white; margin: 0 15px;"> Loja </a>
+    <a href="cosmeticos.php" style="color:white; margin: 0 15px;"> Buscar </a>
+    <a href="galeria.php" style="color:#00FFFF; margin: 0 15px;"> Galeria </a>
+</div>
+
+<h1 style="text-align:center; font-family: 'Bebas Neue'; font-size: 3rem; padding: 30px;">GALERIA DE COSMÉTICOS</h1>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px;">
+<?php foreach($cosmetics->data as $item) { ?>
+    <div style="background: rgba(0,0,0,0.6); padding: 15px; border-radius: 15px; text-align: center; border: 2px solid #00FFFF;">
+        <img src="<?php echo $item->images->icon?>" width="150" style="border-radius: 10px;">
+        <h3 style="font-size: 1.2rem; margin: 10px 0;"><?php echo $item->name?></h3>
+        <p style="color: #00FFFF; font-size: 0.9rem;"><?php echo $item->rarity->value?></p>
+    </div>
+<?php } ?>
+</div>
+</body>
+</html>
